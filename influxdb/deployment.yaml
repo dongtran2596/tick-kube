@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: influxdb
+  namespace: tick
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: influxdb
+    spec:
+      containers:
+      - image: influxdb:1.1.0-alpine
+        imagePullPolicy: Always
+        name: influxdb
+        ports:
+        - containerPort: 8086
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/influxdb
+        - name: influxdb
+          mountPath: /var/lib/influxdb
+        resources:
+          limits:
+            cpu: 8
+            memory: 25Gi
+          requests:
+            cpu: 100m
+            memory: 10Mi
+      volumes:
+      - name: config-volume
+        configMap:
+          name: influxdb-config
+      - name: influxdb
+        emptyDir: {}
