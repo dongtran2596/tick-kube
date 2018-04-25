@@ -1,5 +1,7 @@
 # tick-kube
-1. Cài đặt tick stack:  
+1. Clone git
+2. Di chuyển vào trong thư mục tick-kube
+3. Cài đặt tick stack:  
   ./tick-kube create
-2. Gỡ tick stack:    
+4. Gỡ tick stack:    
   ./tick-kube delete
