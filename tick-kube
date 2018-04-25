@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-source ./config.sh
 source ./scripts/create.sh
 source ./scripts/delete.sh
 case $1 in
