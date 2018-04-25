@@ -5,18 +5,15 @@ source ./scripts/create.sh
 source ./scripts/delete.sh
 case $1 in
   create)
-    create $2 $3
+    create
     exit 0
     ;;
   delete)
-    delete $2 $3
+    delete
     exit 0
     ;;
   *)
-    echo "USAGE: $0 $1"
-    echo ""
-    create
-    delete
+    echo "USAGE: create|delete"
     exit 1
     ;;
 esac  
