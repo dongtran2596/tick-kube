@@ -16,6 +16,6 @@ create() {
   kube $BP/telegraf/daemonset.yaml
   kube $BP/chronograf/deployment.yaml
   kube $BP/chronograf/service.yaml
-  echo "Waiting for public IP..."
+  echo "Waiting for running pods..."
   kubectl get pods --namespace tick -w
 }
