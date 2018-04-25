@@ -15,8 +15,8 @@ case $1 in
   *)
     echo "USAGE: $0 $1"
     echo ""
-    create-usage
-    delete-usage
+    create
+    delete
     exit 1
     ;;
 esac  
