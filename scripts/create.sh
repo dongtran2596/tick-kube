@@ -17,5 +17,5 @@ create() {
   kube $BP/chronograf/deployment.yaml
   kube $BP/chronograf/service.yaml
   echo "Waiting for public IP..."
-  kubectl get svc --namespace tick chronograf -w
+  kubectl get pods --namespace tick -w
 }
