@@ -21,7 +21,7 @@ spec:
           - name: NODE_IP
             valueFrom:
               fieldRef:
-                fieldPath: spec.nodeName
+                fieldPath: status.hostIP
           - name: "HOST_PROC"
             value: "/rootfs/proc"
           - name: "HOST_SYS"
